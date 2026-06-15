@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %} {% load team_tags %}
+  <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Artificial Intelligence-Kyungdong University Global Campus</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="{% static 'images/favicon_io/favicon.ico' %}" rel="icon" />
+    <link
+      href="{% static 'images/favicon_io/apple-touch-icon.png' %}"
+      rel="apple-touch-icon"
+    />
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/news.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <!-- Aos animations -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header fixed-top border-bottom shadow-sm">
+      <div class="container-fluid px-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="logo d-flex align-items-center text-decoration-none"
+          >
+            <img
+              src="{% static 'images/logo.png' %}"
+              alt="KDU Logo"
+              style="height: 60px; width: auto; object-fit: contain"
+            />
+          </a>
+
+          <!-- Navigation Menu -->
+          <nav id="navmenu" class="navmenu">
+            <ul class="d-flex align-items-center m-0 p-0">
+              <li><a href="#hero">Home</a></li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#about"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="about.html#aboutfull"
+                      >Overview</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="about.html#Dean-message"
+                      >Message from Dean</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="about.html#HOD-message"
+                      >Message from HOD</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="about.html#faculty"
+                      >Faculty & Staff Members</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="about.html#curriculum"
+                      >Major Curriculum Components</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="about.html#department-highlights"
+                      >Department Highlights</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="#services">Clubs & Activities</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#admission">Admission</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Home Section -->
+      <section id="hero" class="hero section dark-background">
+        <div class="video-background">
+          <video autoplay="" muted="" loop="" playsinline="">
+            <source
+              src="{% static 'images/video/kduvid.mp4' %}"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  style="font-size: 3rem"
+                >
+                  Transform the World with Artificial Intelligence
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200">
+                  Join the KDU Global Undergraduate Program in AI and become a
+                  leader of innovation and change.
+                </p>
+                <div
+                  class="hero-buttons"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <a href="#about" class="btn btn-primary">Explore</a>
+                  <a href="#admission" class="btn btn-outline">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div
+          class="container section-title"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <span class="subtitle">About</span>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-duration="800">
+          <div class="row align-items-center">
+            <!-- LEFT CONTENT -->
+            <div
+              class="col-lg-6 pt-4 pt-lg-0 content"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h2 class="fw-bold mb-3">About the Department</h2>
+              <p class="fst-italic">
+                The Department of Artificial Intelligence at Kyungdong
+                University Global nurtures future innovators and professionals
+                who will lead the era of intelligent technology through
+                practical and research-based education.
+              </p>
+
+              <ul class="list-unstyled mt-3">
+                <li data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-cpu me-2 text-primary"></i> Focused on AI,
+                  Machine Learning, and Data Science
+                </li>
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-mortarboard me-2 text-primary"></i> Global
+                  learning environment with diverse students
+                </li>
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-gear-wide-connected me-2 text-primary"></i>
+                  Hands-on labs and innovative projects
+                </li>
+              </ul>
+
+              <a
+                href="about.html"
+                class="btn btn-primary mt-4 rounded-pill px-4"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              >
+                Learn More
+              </a>
+              <br />
+            </div>
+
+            <!-- RIGHT IMAGE CAROUSEL -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+              <div
+                id="carouselExampleAutoplaying"
+                class="carousel slide carousel-fade shadow-lg rounded-4 overflow-hidden"
+                data-bs-ride="carousel"
+                data-bs-interval="3000"
+                style="height: 350px"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/misc/kdukdu.jpg' %}"
+                      class="d-block w-100 carousel-image"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/misc/kdukduu.jpg' %}"
+                      class="d-block w-100 carousel-image"
+                      alt=""
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/misc/ai club.png' %}"
+                      class="d-block w-100 carousel-image"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleAutoplaying"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleAutoplaying"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- image crousel -->
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span class="subtitle">Clubs & Activities</span>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-showcase mt-5">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="services-list">
+                  <div
+                    class="service-item"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                  >
+                    <div class="service-icon">
+                      <i class="bi bi-palette"></i>
+                    </div>
+                    <div class="service-content">
+                      <h4>
+                        <a href="javascript:void(0)"
+                          >Innovation & Collaboration</a
+                        >
+                      </h4>
+                      <p>
+                        Encouraging students to explore creativity through
+                        coding challenges, hackathons, and real-world AI
+                        projects that promote teamwork and innovation.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="service-item"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                  >
+                    <div class="service-icon">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                    <div class="service-content">
+                      <h4>
+                        <a href="javascript:void(0)">Technical Development</a>
+                      </h4>
+                      <p>
+                        Building strong programming foundations and hands-on
+                        experience in Artificial Intelligence, Web Development,
+                        and Software Engineering through workshops and
+                        mentorship.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="service-item"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                  >
+                    <div class="service-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div class="service-content">
+                      <h4>
+                        <a href="javascript:void(0)">Research & Growth</a>
+                      </h4>
+                      <p>
+                        Fostering curiosity and analytical thinking by engaging
+                        in AI research, data-driven projects, and continuous
+                        skill development to prepare for global opportunities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="featured-service"
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                >
+                  <div class="service-image">
+                    <img
+                      src="{% static 'images/misc/vr.JPG' %}"
+                      alt="Featured Service"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="service-overlay">
+                    <div class="overlay-content">
+                      <h3>Clubs & Activities</h3>
+                      <p>
+                        Empowering future innovators to explore Artificial
+                        Intelligence, coding, and data-driven technologies
+                        through collaboration, creativity, and continuous
+                        learning.
+                      </p>
+                      <a
+                        href="clubs.html"
+                        class="service-link"
+                      >
+                        <span>Discover More</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- news section -->
+      <!-- News Section -->
+      <section id="news" class="section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span class="subtitle">News Board</span>
+          <h2>Latest News</h2>
+          <p>
+            Stay updated with the latest announcements, events, and activities
+            from the Department of Artificial Intelligence.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row g-4 mt-4">
+            {% load_service_cards as cards %} {% for card in cards %}
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="{% if forloop.counter0 == 0 %}100{% elif forloop.counter0 == 1 %}200{% else %}300{% endif %}"
+            >
+              <div class="service-card h-100 hover-up">
+                <!-- Image -->
+                <div class="card-image">
+                  {% if card.image %}
+                  <img
+                    src="{% static 'images/' %}{{ card.image }}"
+                    alt="{{ card.title }}"
+                    class="img-fluid"
+                  />
+                  {% else %}
+                  <img
+                    src="{% static 'images/services/placeholder.jpg' %}"
+                    alt="No image available"
+                    class="img-fluid"
+                  />
+                  {% endif %}
+                </div>
+
+                <!-- Content -->
+                <div class="card-body d-flex flex-column">
+                  <h5 class="fw-semibold">{{ card.title }}</h5>
+                  <p class="flex-grow-1">{{ card.description }}</p>
+
+                  {% if card.link_url %}
+                  <a
+                    href="{{ card.link_url }}"
+                    target="_blank"
+                    rel="noopener"
+                    class="news-card-btn mt-3 align-self-start"
+                  >
+                    {{ card.link_text|default:"Read More" }}
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- View All Button -->
+          <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+            <a href="news.html" class="news-btn">
+              View All News
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /News Section -->
+
+      <!-- /news section -->
+
+      <!-- admission section -->
+      <section id="admission" class="call-to-action section">
+        <div class="container" data-aos="zoom-out">
+          <div class="row g-5">
+            <div
+              class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first"
+            >
+              <h3>Turn Your Curiosity into World-Changing Innovation</h3>
+              <p>
+                Turn your curiosity into world-changing innovation with KDU
+                Global’s AI Program. Dive into machine learning, bioinformatics,
+                NLP, and more — and craft technologies that truly serve
+                humanity. Be the mind behind tomorrow’s breakthroughs.
+              </p>
+              <a class="cta-btn align-self-start" href="admission.html"
+                >Apply Now</a
+              >
+            </div>
+
+            <div
+              class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center"
+            >
+              <div class="img">
+                <img
+                  src="{% static 'images/misc/IMG_1756.jpg' %}"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /admission section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <span class="subtitle">Contact</span>
+          <h2>Contact Us</h2>
+          <p>
+            Interested to join the Department of Artificial Intelligence?
+            Intersted in joining our clubs?-
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row align-items-stretch">
+            <div
+              class="col-lg-7 order-lg-1 order-2"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <div class="contact-form-container">
+                <div class="form-intro">
+                  <p>
+                    Enter your details below and we will get in touch with you
+                    as soon as possible
+                  </p>
+                </div>
+
+                <form
+                  action="{% url 'contact' %}"
+                  method="post"
+                  class="php-email-form contact-form"
+                >
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <input
+                          type="text"
+                          name="name"
+                          class="form-input"
+                          id="userName"
+                          placeholder="Your Name"
+                          required=""
+                        />
+                        <label for="userName" class="field-label">Name</label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <input
+                          type="email"
+                          class="form-input"
+                          name="email"
+                          id="userEmail"
+                          placeholder="Your Email"
+                          required=""
+                        />
+                        <label for="userEmail" class="field-label">Email</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <input
+                          type="tel"
+                          class="form-input"
+                          name="phone"
+                          id="userPhone"
+                          placeholder="Your Phone"
+                        />
+                        <label for="userPhone" class="field-label">Phone</label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-field">
+                        <input
+                          type="text"
+                          class="form-input"
+                          name="subject"
+                          id="messageSubject"
+                          placeholder="Subject"
+                          required=""
+                        />
+                        <label for="messageSubject" class="field-label"
+                          >Subject</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-field message-field">
+                    <textarea
+                      class="form-input message-input"
+                      name="message"
+                      id="userMessage"
+                      rows="5"
+                      placeholder="Tell us your concern"
+                      required=""
+                    ></textarea>
+                    <label for="userMessage" class="field-label">Message</label>
+                  </div>
+
+                  <div class="my-3">
+                    <div class="loading">Loading...</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent.</div>
+                  </div>
+
+                  <button type="submit" class="send-button">
+                    Send Message
+                    <span class="button-arrow">→</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-5 order-lg-2 order-1"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <div class="contact-sidebar">
+                <div class="contact-header">
+                  <h3>Get in Touch</h3>
+                  <p>
+                    Call us within the hours provided down below or leave a
+                    message at the email provided.
+                  </p>
+                </div>
+
+                <div class="contact-methods">
+                  <div
+                    class="contact-method"
+                    data-aos="fade-in"
+                    data-aos-delay="350"
+                  >
+                    <div class="contact-icon">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                      <span class="method-label">Address</span>
+                      <p>
+                        46 Bongpo 4-gil, Toseong-myeon, Goseong-gun<br />Gangwon-do
+                        24764, South Korea
+                      </p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="contact-method"
+                    data-aos="fade-in"
+                    data-aos-delay="400"
+                  >
+                    <div class="contact-icon">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                      <span class="method-label">Email</span>
+                      <p>info@kduniv.ac.kr</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="contact-method"
+                    data-aos="fade-in"
+                    data-aos-delay="450"
+                  >
+                    <div class="contact-icon">
+                      <i class="bi bi-telephone"></i>
+                    </div>
+                    <div class="contact-details">
+                      <span class="method-label">Phone</span>
+                      <p>+82 010-6721-2288</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="contact-method"
+                    data-aos="fade-in"
+                    data-aos-delay="500"
+                  ></div>
+                </div>
+
+                <div
+                  class="connect-section"
+                  data-aos="fade-up"
+                  data-aos-delay="550"
+                >
+                  <span class="connect-label">Connect with us</span>
+                  <div class="social-links">
+                    <a
+                      href="https://kr.linkedin.com/company/kyungdong-university-global"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a
+                      href="https://x.com/Kduglobal2014"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/kduglobal/"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <i class="bi bi-instagram"></i>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/KDUGlobalCampus"
+                      target="_blank"
+                      class="social-link"
+                    >
+                      <i class="bi bi-facebook"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Aos animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 800, // animation duration
+        once: false, // animation happens only once
+      });
+    </script>
+
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+          aria-label="Bootstrap"
+        >
+          <svg class="bi" width="30" height="24" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary"
+          >© 2025 Kyungdong University Global</span
+        >
+      </div>
+      <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+        <li class="ms-3">
+          <a
+            class="text-body-secondary p-3 border"
+            href="admin/"
+            target="_blank"
+            aria-label="Admin"
+            >Admin</a
+          >
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

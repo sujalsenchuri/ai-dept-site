@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %} {% load team_tags %}
+  <head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+      <!-- Favicons -->
+      <link href="{% static 'images/favicon_io/favicon.ico' %}" rel="icon" />
+      <link
+        href="{% static 'images/favicon_io/apple-touch-icon.png' %}"
+        rel="apple-touch-icon"
+      />
+
+      <!-- Main CSS File -->
+      <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+      <link href="{% static 'css/news.css' %}" rel="stylesheet" />
+
+      <!-- Bootstrap CSS -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+
+      <!-- Bootstrap Icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      />
+
+      <!-- Google Fonts -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+
+      <!-- AOS Animation -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        rel="stylesheet"
+      />
+
+      <!-- animation -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Floating Back Button -->
+    <a href="index.html#about" class="back-btn" title="Back to Home">
+      <i class="bi bi-house-door"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container position-relative" data-aos="fade-down">
+        <h1 class="fw-bold display-5 mb-2">Club & Activities</h1>
+        <p class="lead mb-0">Kyungdong University Global Campus</p>
+      </div>
+    </section>
+
+    <!-- CLUB LIST -->
+    <section class="section py-5">
+      <div class="container">
+        <div class="row g-4">
+          {% for club in clubs %}
+          <div class="col-md-4" data-aos="fade-up"{% if forloop.counter > 1 %} data-aos-delay="{{ forloop.counter0 }}"{% endif %}>
+            <div class="card h-100 shadow-sm border-0 hover-up text-center p-4">
+              <i class="bi {{ club.icon }} fs-1 text-primary mb-3"></i>
+              <h4 class="fw-bold">{{ club.name }}</h4>
+              <p class="text-muted small">{{ club.description }}</p>
+              {% if club.link_url %}
+              <a href="{{ club.link_url|normalize_club_link }}"
+                 class="btn btn-outline-primary mt-auto">
+                {{ club.link_text }}
+              </a>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+    </script>
+  </body>
+</html>

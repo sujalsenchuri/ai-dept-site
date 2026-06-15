@@ -1,0 +1,46 @@
+{% load static %}
+<div class="col-md-6 col-lg-3">
+  <article class="member-card h-100" data-aos="zoom-in" data-aos-delay="150">
+    <figure class="member-media">
+      {% if member.photo %}
+        <img
+          src="{% static 'images/' %}{{ member.photo }}"
+          class="img-fluid"
+          alt="{{ member.name }}"
+        />
+      {% else %}
+        <img
+          src="{% static 'images/person/placeholder.webp' %}"
+          class="img-fluid"
+          alt="No photo available"
+        />
+      {% endif %}
+      <ul class="social-list">
+        {% if member.instagram_url %}
+        <li>
+          <a href="{{ member.instagram_url }}" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </li>
+        {% endif %}
+        {% if member.linkedin_url %}
+        <li>
+          <i class="bi bi-linkedin"></i>
+        </li>
+        {% endif %}
+        {% if member.facebook_url %}
+        <li>
+          <a href="{{ member.facebook_url }}" target="_blank" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </figure>
+    <div class="member-content">
+      <h3 class="member-name">{{ member.name }}</h3>
+      <p class="member-role">{{ member.position }}</p>
+      <p class="member-bio">{{ member.bio }}</p>
+    </div>
+  </article>
+</div>

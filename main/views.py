@@ -17,6 +17,15 @@ def about(request):
 def contact(request):
     return render(request, "contact.html")
 
+def admission(request):
+    return render(request, "admission.html")
+
+def clubs(request):
+    return render(request, "clubs.html")
+
+def news(request):
+    return render(request, "news.html")
+
 
 def flatpage(request, page):
     """Render a template file from `main/templates/` if it exists.
